@@ -1,29 +1,47 @@
 void main() {
-  for (int i = 1; i < 11; i++) {
-    for (int b= 0; b < 11; b++) {
-      int result =key(data: i, data1: b);
-       print("$i*$b=$result");
-
-    }
+  mainone();
+}
+//   student hari= student("hari",24,"ernakulam");
+//   hari.functionprintStudentDteails();
+//   mainone();
+// }
+// class student{
+//   String studentName="";
+//   int studentAge=0;
+//   String studentAddress='';
+//
+//   student(String name,int age,String address){
+//
+//   this.studentName =name;
+//   this.studentAge =age;
+//   this.studentAddress =address;
+//
+// }
+//   functionprintStudentDteails(){
+//     print('student name:$studentName');
+//     print('student age:$studentAge');
+//     print('student address:$studentAddress');
+//
+//   }
+//   }
+  void mainone(){
+ Students Shiyas= Students("kevin",11,"kottayam");
+Shiyas.functionDetails();
   }
+  class Students {
+    String studentName = '';
+    int studentAge = 0;
+    String studentAddress = '';
 
-}
-  int key ({required int data,required int data1}){
-  int result =data*data1;
-  return result;
-
-}
-
-void main1() {
-  for (int i = 1; i < 10; i++) {
-    for (int a = 1; a < 11; a++) {
-      int result = name(data: i, data1: a);
-      print("$i+$a= $result");
+    Students(String name, int age, String address) {
+      this.studentName = name;
+      this.studentAge = age;
+      this.studentAddress = address;
     }
-  }
-}
 
-  int name({required int data, required int data1}) {
-    int result = data + data1;
-    return result;
+    functionDetails() {
+      print('student name:$studentName');
+      print('student age:$studentAge');
+      print('student address:$studentAddress');
+    }
   }
