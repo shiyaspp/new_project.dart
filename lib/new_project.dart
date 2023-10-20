@@ -1,106 +1,77 @@
-void main() {
-  mainone();
-  maintwo();
-  mainThree();
-  B b=B(bc: "test two",ab: "test one");
-  b.fun2();
-  b.fun1();
 
-  student hari = student(studentName: 'hameem', studentAge: 11, studentAddress: 'mpm',);
-  hari.functionprintStudentDteails();
- }
- class student{
-   String studentName="";
-  int studentAge=0;
-  String studentAddress='';
 
-  student( {required  this.studentName,required this.studentAge,required this.studentAddress}){
-}
-  functionprintStudentDteails(){
-    print('student name:$studentName');
-    print('student age:$studentAge');
-    print('student address:$studentAddress');
+/*mixin messageMixinClass {
+  void printMessage(String message) {
+    print('message:$message');
+  }
+  }
+
+class Dog with messageMixinClass  {
+  String name;
+  Dog({required this.name});
+  void bark() {
+    print('$name is barking');
+  }
 
   }
+
+
+class Cat with messageMixinClass {
+  String name;
+  Cat({required this.name});
+   void meow() {
+     print("$name is meowing");
    }
-  void mainone(){
- Students Shiyas= Students("kevin",11,"kottayam");
-Shiyas.functionDetails();
-  }
-  class Students {
-    String studentName = '';
-    int studentAge = 0;
-    String studentAddress = '';
+   }
 
-    Students(String name, int age, String address) {
-      this.studentName = name;
-      this.studentAge = age;
-      this.studentAddress = address;
-    }
+void main() {
+  var dog = Dog(name: 'Tom');
+  var cat = Cat(name: 'chikku');
 
-    functionDetails() {
-      print('student name:$studentName');
-      print('student age:$studentAge');
-      print('student address:$studentAddress');
-    }
-  }
-  void maintwo(){
+  dog.bark();
+  dog.printMessage('hello from dog');
 
-  key hey =key("hameem",55,"thrissur");
-  hey.studentdetails();
+  cat.meow();
+  cat.printMessage('hello from cat');
+}*/
 
-  }
-class key {
-  String studentName = '';
-  int studentAge= 0;
-  String studentAddress='';
 
-  key(String name,int age,String address){
-  this.studentName = name ;
-  this.studentAge= age;
-  this.studentAddress= address;
+mixin messageMixinClass {
 
-}
-studentdetails(){
-    print('student name =$studentName');
-    print ('studen age=$studentAge');
-    print ('student address=$studentAddress');
-
-}
-
-}
-void mainThree(){
-  hai james= hai(10,'fayas','A');
-  james.studentdetails();
-}
-class hai{
-  int number=0;
-  String studentName='';
-  String studentgrade ='';
-
-  hai(int number,String Name,String grade){
-  this.number= number;
-  this.studentName=Name;
-  this.studentgrade= grade;
-}
-studentdetails(){
-    print('number=$number');
-    print ('Name=$studentName');
-    print ('grade=$studentgrade');
-
-}
-}
-class A {
-  String?ab;
-  A({required this.ab});
-  fun1(){
-    print(ab);
+  void MyName(String parents) {
+    print('parents:$parents');
   }
 }
-class B extends A{
-  String?bc;
-  B({required this.bc,required super.ab});
-  fun2(){
-    print(bc);
+
+class Shiyas  with messageMixinClass{
+  String name;
+  Shiyas({required this.name});
+
+  void good(){
+    print ('$name is talking');
+
   }
 }
+class hameem with messageMixinClass {
+  String name;
+  hameem({required this.name});
+
+  void bad(){
+    print ('$name is silent');
+
+  }
+}
+
+void main(){
+  var shiyas= Shiyas(name: 'he');
+  var  Hameem = hameem(name: 'he');
+  shiyas.good();
+  shiyas.MyName('he is good');
+
+  Hameem.bad();
+  Hameem.MyName('he is sad');
+}
+
+
+
+
